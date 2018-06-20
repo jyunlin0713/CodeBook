@@ -1,7 +1,7 @@
 DataStructures:
--Union-Find Set
+-Union-Find Set (6/20/18)
 -Sparse Table
--Matrix
+-Matrix (6/20/18)
 -Segment Tree
 -Segment Tree Lazy Label
 -BIT Tree
@@ -9,22 +9,28 @@ DataStructures:
 -Trie
 
 Flows:
--Max Flow
--Mincost Flow
--Mincost Flow BF
+-Dinic (6/20/18)
+-Mincost Flow (6/20/18)
+-Mincost Flow BF (6/20/18)
 
 Graph:
--Max Pairing
+-Max Bipartite Pairing (6/20/18)
 -Bron Kerbosch op1
--Dijkstra
--Bellman Ford
--Floyd Warshall
--Prim
--Kruskal
+-Dijkstra (6/20/18)
+-Bellman Ford (6/20/18)
+-Floyd Warshall (6/20/18)
+-Prim (6/20/18)
+-Kruskal (6/20/18)
+-LCA
 
 Geometry:
 -Segment Intersection
 -Segment Overlap
+
+NumberTheory:
+-modops (modexp, modinv, modmul)
+-linear congruence
+-gcd, lcm, extgcd
 
 Others:
 -BigNum
