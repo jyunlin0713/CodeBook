@@ -3,6 +3,7 @@ using namespace std;
 #define pb push_back
 #define pii pair<int,int>
 #define pll pair<ll, ll>
+#define pdd pair<double, double>
 #define f first
 #define s second
 #define MOD 1000000007
@@ -28,6 +29,9 @@ int main()
 #include <vector>
 #include <queue>
 #include <cmath>
+#include <set>
+#include <algorithm>
+#include <iomanip>
 
 //TO ADD: dset, spfa, bit
 
