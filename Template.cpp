@@ -32,6 +32,9 @@ int main()
 #include <set>
 #include <algorithm>
 #include <iomanip>
+#include <stack>
+#include <string>
+#include <cstring>
 
 //TO ADD: dset, spfa, bit
 
