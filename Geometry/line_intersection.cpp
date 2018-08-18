@@ -18,7 +18,7 @@ typedef long long ll;
 
 double EPS = 1e-10;
 
-double add(double a, double b) //加起來夠小直接=0
+double add(double a, double b)
 {
     if(abs(a+b)<EPS*(abs(a)+abs(b)))return 0;
     else return a+b;
@@ -47,75 +47,54 @@ P intersection(P p1, P p2, P q1, P q2)//p and q Must not be parallel
     return p1 + (p2-p1)*((q2-q1).det(q1-p1)/(q2-q1).det(p2-p1));
 }
 
-#define MAXN 20
-#define MAXQ 2000
-int N, Q;
-P p[MAXN], q[MAXN];
-int Q1[MAXQ], Q2[MAXQ];
-
-struct dset
+bool par(P p1, P p2, P p3, P p4)
 {
-    dset(int n):size(n){ p = new int [n]; for(int i = 0; i < size; i++)p[i] = i; }
-    ~dset(){delete [] p;}
-
-    void Union(int x, int y) //請先檢查兩人屬於不同group
-    {
-        p[Find(x)] = Find(y);
-    }
-    int Find(int i)
-    {
-        if(p[i] != i) p[i] = Find(p[i]);
-        return p[i];
-    }
-
-    int size;
-    int * p;
-};
-
-void solve()
-{
-    dset Ds(N+1);
-    FOR(i,2,N)
-        FOR(j,1,i-1)
-        {
-            //case: parallel
-            if((q[i]-p[i]).det(q[j]-p[j])==0)
-            {
-                if(on_seg(p[i],q[i],p[j]) || on_seg(p[i],q[i],q[j])
-                || on_seg(p[i],q[i],p[j]) || on_seg(p[i],q[i],q[j]))
-                    if(Ds.Find(i)!=Ds.Find(j))Ds.Union(i,j);
-            }
-            else//case: not parallel
-            {
-                P r = intersection(p[i],q[i],p[j],q[j]);
-                if( on_seg(p[i],q[i],r) && on_seg(p[j],q[j],r) )
-                    if(Ds.Find(i)!=Ds.Find(j))Ds.Union(i,j);
-            }
-        }
-    FOR(i,0,Q-1)
-        if(Ds.Find(Q1[i])==Ds.Find(Q2[i]))cout << "CONNECTED\n";
-        else cout << "NOT CONNECTED\n";
+	return (p2-p1).det(p4-p3)==0;
 }
 
-int main()
+bool operator<(const P& lhs, const P& rhs)
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
+    return (lhs.x==rhs.x)?lhs.y<rhs.y:lhs.x<rhs.x;
+}
 
-    cin >> N;
-    while(N)
+bool operator==(const P& lhs, const P& rhs)
+{
+    return lhs.x==rhs.x&&lhs.y==rhs.y;
+}
+
+double len(P vec)
+{
+    return sqrt(add(vec.x*vec.x, vec.y*vec.y));
+}
+
+double dis(P p1, P p2)
+{
+    return len(p2-p1);
+}
+
+struct seg
+{
+    seg(){}
+    seg(P _p1, P _p2)
     {
-        FOR(i,1,N)cin >> p[i].x >> p[i].y >> q[i].x >> q[i].y;
-        Q = 0;
-        cin >> Q1[Q] >> Q2[Q];
-        while(Q1[Q])
-        {
-            Q++;
-            cin >> Q1[Q] >> Q2[Q];
-        }
-        solve();
-        cin >> N;
+        p[0]=_p1;
+        p[1]=_p2;
+        if(p[1]<p[0])swap(p[0],p[1]);
     }
+    P p[2];
+};
 
-    return 0;
+bool par(seg& lhs, seg& rhs)
+{
+	return par(lhs.p[0],lhs.p[1],rhs.p[0],rhs.p[1]);
+}
+
+P intersection(seg& lhs, seg& rhs)//p and q Must not be parallel
+{
+    return intersection(lhs.p[0],lhs.p[1],rhs.p[0],rhs.p[1]);
+}
+
+bool on_seg(seg& sg, P q)
+{
+    return on_seg(sg.p[0],sg.p[1],q);
 }
