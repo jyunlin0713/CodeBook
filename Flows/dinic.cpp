@@ -13,7 +13,7 @@ using namespace std;
 typedef long long ll;
 #define MAXV 100
 #define INF 2147483647
-int n, m, S, T;
+int N, M, S, T;
 
 struct edge{ int to, cap, rev; };
 vector<edge> G[MAXV];
@@ -26,12 +26,12 @@ void add_edge(int from, int to, int cap)
     G[to].pb((edge){from, 0, G[from].size()-1});
 }
 
-void bfs(int s)
+void bfs(int S)
 {
     memset(level, -1, sizeof(level));
     queue<int> q;
-    level[s] = 0;
-    q.push(s);
+    level[S] = 0;
+    q.push(S);
 
     while(!q.empty())
     {
@@ -69,34 +69,17 @@ int dfs(int v, int t, int f)
     return 0;
 }
 
-int dinic(int s, int t)
+int dinic(int S, int T)
 {
     int flow = 0;
     while(true)
     {
-        bfs(s);
-        if(level[t] < 0)return flow;
+        bfs(S);
+        if(level[T] < 0)return flow;
         memset(iter, 0, sizeof(iter));
         int f;
-        while((f = dfs(s, t, INF)) > 0)flow+=f;
+        while((f = dfs(S, T, INF)) > 0)flow+=f;
     }
-}
-
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-
-    cin >> n >> m >> S >> T;
-    int a, b, c;
-    FOR(i,1,m)
-    {
-        cin >> a >> b >> c;
-        add_edge(a,b,c);
-    }
-    cout << dinic(S,T) << '\n';
-
-    return 0;
 }
 
 /*
