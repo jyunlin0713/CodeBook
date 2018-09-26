@@ -24,7 +24,8 @@ int main()
 
 //==============================================
 
-//POJ ±M¥Î
+//POJ Â±MÂ¥ÃŽ
+#include <cstdio>
 #include <iostream>
 #include <vector>
 #include <queue>
