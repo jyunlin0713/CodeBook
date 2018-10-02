@@ -24,7 +24,7 @@ int main()
 
 //==============================================
 
-//POJ ±M¥Î
+//POJ 專用
 #include <cstdio>
 #include <iostream>
 #include <vector>
@@ -36,6 +36,28 @@ int main()
 #include <stack>
 #include <string>
 #include <cstring>
+using namespace std;
+#define pb push_back
+#define pii pair<int,int>
+#define pll pair<ll, ll>
+#define pdd pair<double, double>
+#define f first
+#define s second
+#define MOD 1000000007
+#define mkp make_pair
+#define M_PI 3.14159265358979323846
+#define FOR(i,l,r) for (int i=l;i<=r;i++)
+#define FORD(i,r,l) for (int i=r;i>=l;i--)
+#define INF 2147483647
+typedef long long ll;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    return 0;
+}
 
 //TO ADD: dset, spfa, bit
 
