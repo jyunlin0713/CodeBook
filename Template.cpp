@@ -11,7 +11,7 @@ using namespace std;
 #define M_PI 3.14159265358979323846
 #define FOR(i,l,r) for (int i=l;i<=r;i++)
 #define FORD(i,r,l) for (int i=r;i>=l;i--)
-#define INF 2147483647
+#define INF 1000000000
 typedef long long ll;
 
 int main()
