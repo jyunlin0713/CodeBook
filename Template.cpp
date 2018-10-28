@@ -12,6 +12,7 @@ using namespace std;
 #define FOR(i,l,r) for (int i=l;i<=r;i++)
 #define FORD(i,r,l) for (int i=r;i>=l;i--)
 #define INF 1000000000
+#define CL(x) memset(x,0,sizeof(x))
 typedef long long ll;
 
 int main()
@@ -49,6 +50,7 @@ using namespace std;
 #define FOR(i,l,r) for (int i=l;i<=r;i++)
 #define FORD(i,r,l) for (int i=r;i>=l;i--)
 #define INF 1000000000
+#define CL(x) memset(x,0,sizeof(x))
 typedef long long ll;
 
 int main()
