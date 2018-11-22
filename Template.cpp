@@ -3,6 +3,10 @@ using namespace std;
 #define pb push_back
 #define pii pair<int,int>
 #define pll pair<ll, ll>
+#define pil pair<int,ll>
+#define pli pair<ll,int>
+#define ppi pair<pii,int>
+#define pip pair<int,pii>
 #define pdd pair<double, double>
 #define f first
 #define s second
@@ -45,6 +49,10 @@ using namespace std;
 #define pb push_back
 #define pii pair<int,int>
 #define pll pair<ll, ll>
+#define pil pair<int,ll>
+#define pli pair<ll,int>
+#define ppi pair<pii,int>
+#define pip pair<int,pii>
 #define pdd pair<double, double>
 #define f first
 #define s second
