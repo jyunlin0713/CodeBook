@@ -19,6 +19,8 @@ using namespace std;
 #define LORD(i,r,l) for (ll i=r;i>=l;i--)
 #define INF 1000000000
 #define CL(x) memset(x,0,sizeof(x))
+#define DEB(x) cout << #x << " : " << x << '\n'
+#define ALL(x) x.begin(), x.end()
 typedef long long ll;
 
 int main()
@@ -65,6 +67,8 @@ using namespace std;
 #define LORD(i,r,l) for (ll i=r;i>=l;i--)
 #define INF 1000000000
 #define CL(x) memset(x,0,sizeof(x))
+#define DEB(x) cout << #x << " : " << x << '\n'
+#define ALL(x) x.begin(), x.end()
 typedef long long ll;
 
 int main()
