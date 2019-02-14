@@ -21,7 +21,7 @@ using namespace std;
 #define CL(x) memset(x,0,sizeof(x))
 #define DEB(x) cout << #x << " : " << x << '\n'
 #define ALL(x) x.begin(), x.end()
-#define SZ(x) s.size()
+#define SZ(x) x.size()
 typedef long long ll;
 
 int main()
@@ -70,7 +70,7 @@ using namespace std;
 #define CL(x) memset(x,0,sizeof(x))
 #define DEB(x) cout << #x << " : " << x << '\n'
 #define ALL(x) x.begin(), x.end()
-#define SZ(x) s.size()
+#define SZ(x) x.size()
 typedef long long ll;
 
 int main()
