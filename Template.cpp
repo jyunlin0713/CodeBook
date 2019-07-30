@@ -25,8 +25,9 @@ using namespace std;
 #define UI(x) (int)(x-'A')
 #define LI(x) (int)(x-'a')
 typedef long long ll;
+#define int ll
 
-int main()
+int32_t main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -74,8 +75,9 @@ using namespace std;
 #define ALL(x) x.begin(), x.end()
 #define SZ(x) x.size()
 typedef long long ll;
+#define int ll
 
-int main()
+int32_t main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
