@@ -142,3 +142,8 @@ pll modinv(ll x, ll y)
     if(gcd(x, y) != 1)return pll(0, 0);
     return pll(extgcd(x, y).f, 1);
 }
+
+//random number
+auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
+std::mt19937_64 mt(seed);
+//usage : mt() returns a random number
