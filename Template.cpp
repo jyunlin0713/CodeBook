@@ -24,6 +24,8 @@ using namespace std;
 #define SZ(x) x.size()
 #define UI(x) (int)(x-'A')
 #define LI(x) (int)(x-'a')
+#define lc(x) x*2
+#define rc(x) x*2+1
 typedef long long ll;
 
 int main()
@@ -73,6 +75,10 @@ using namespace std;
 #define DEB(x) cout << #x << " : " << x << '\n'
 #define ALL(x) x.begin(), x.end()
 #define SZ(x) x.size()
+#define UI(x) (int)(x-'A')
+#define LI(x) (int)(x-'a')
+#define lc(x) x*2
+#define rc(x) x*2+1
 typedef long long ll;
 
 int main()
