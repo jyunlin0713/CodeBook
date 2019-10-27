@@ -27,6 +27,7 @@ using namespace std;
 #define lc(x) x*2
 #define rc(x) x*2+1
 typedef long long ll;
+typedef long double ld;
 
 int main()
 {
@@ -81,6 +82,7 @@ using namespace std;
 #define lc(x) x*2
 #define rc(x) x*2+1
 typedef long long ll;
+typedef long double ld;
 
 int main()
 {
