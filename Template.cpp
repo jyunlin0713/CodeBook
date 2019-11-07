@@ -19,13 +19,15 @@ using namespace std;
 #define LORD(i,r,l) for (ll i=r;i>=l;i--)
 #define INF 1000000000
 #define CL(x) memset(x,0,sizeof(x))
-#define DEB(x) cout << #x << " : " << x << '\n'
+#define DBG(x) cout << #x << " : " << x << '\n'
 #define ALL(x) x.begin(), x.end()
 #define SZ(x) x.size()
 #define UI(x) (int)(x-'A')
 #define LI(x) (int)(x-'a')
 #define lc(x) x*2
 #define rc(x) x*2+1
+#define LL_MAX (1LL<<60)
+#define DB 0
 typedef long long ll;
 typedef long double ld;
 
@@ -81,6 +83,8 @@ using namespace std;
 #define LI(x) (int)(x-'a')
 #define lc(x) x*2
 #define rc(x) x*2+1
+#define LL_MAX (1LL<<60)
+#define DB 0
 typedef long long ll;
 typedef long double ld;
 
