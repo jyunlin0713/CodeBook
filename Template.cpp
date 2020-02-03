@@ -22,8 +22,10 @@ using namespace std;
 #define SZ(x) x.size()
 #define UI(x) (int)(x-'A')
 #define LI(x) (int)(x-'a')
+#define DI(x) (int)(x-'0')
 #define LL_MAX (1LL<<60)
 #define DB 0
+#define nl cout<<'\n';
 typedef long long ll;
 typedef long double ld;
 
@@ -75,8 +77,10 @@ using namespace std;
 #define SZ(x) x.size()
 #define UI(x) (int)(x-'A')
 #define LI(x) (int)(x-'a')
+#define DI(x) (int)(x-'0')
 #define LL_MAX (1LL<<60)
 #define DB 0
+#define nl cout<<'\n';
 typedef long long ll;
 typedef long double ld;
 
