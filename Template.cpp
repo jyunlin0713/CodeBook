@@ -7,6 +7,7 @@ using namespace std;
 #define pli pair<ll,int>
 #define ppi pair<pii,int>
 #define pip pair<int,pii>
+#define ppp pair<pii,pii>
 #define pdd pair<double, double>
 #define f first
 #define s second
@@ -54,43 +55,6 @@ int main()
 #include <assert.h>
 #include <climits>
 #include <time.h>
-using namespace std;
-#define pb push_back
-#define pii pair<int,int>
-#define pll pair<ll, ll>
-#define pil pair<int,ll>
-#define pli pair<ll,int>
-#define ppi pair<pii,int>
-#define pip pair<int,pii>
-#define pdd pair<double, double>
-#define f first
-#define s second
-#define MOD 1000000007
-#define mkp make_pair
-#define FOR(i,l,r) for (int i=l;i<=r;i++)
-#define LOR(i,l,r) for (ll i=l;i<=r;i++)
-#define FORD(i,r,l) for (int i=r;i>=l;i--)
-#define LORD(i,r,l) for (ll i=r;i>=l;i--)
-#define CL(x) memset(x,0,sizeof(x))
-#define DBG(x) cout << #x << " : " << x << '\n'
-#define ALL(x) x.begin(), x.end()
-#define SZ(x) x.size()
-#define UI(x) (int)(x-'A')
-#define LI(x) (int)(x-'a')
-#define DI(x) (int)(x-'0')
-#define LL_MAX (1LL<<60)
-#define DB 0
-#define nl cout<<'\n';
-typedef long long ll;
-typedef long double ld;
-
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-
-    return 0;
-}
 
 //TO ADD: dset, spfa, bit
 
