@@ -27,6 +27,7 @@ using namespace std;
 #define LL_MAX (1LL<<60)
 #define DB 0
 #define nl cout<<'\n';
+#define DSCR(v) sort(ALL(v));v.resize(unique(ALL(v))-v.begin());
 typedef long long ll;
 typedef long double ld;
 
