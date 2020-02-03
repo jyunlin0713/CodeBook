@@ -20,7 +20,7 @@ using namespace std;
 #define CL(x) memset(x,0,sizeof(x))
 #define DBG(x) cout << #x << " : " << x << '\n'
 #define ALL(x) x.begin(), x.end()
-#define SZ(x) x.size()
+#define SZ(x) (int)(x.size())
 #define UI(x) (int)(x-'A')
 #define LI(x) (int)(x-'a')
 #define DI(x) (int)(x-'0')
