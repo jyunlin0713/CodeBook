@@ -29,6 +29,11 @@ using namespace std;
 #define nl cout<<'\n';
 #define DSCR(v) sort(ALL(v)),v.resize(unique(ALL(v))-v.begin())
 #define RNK(x,v) (int)(lower_bound(ALL(v),x)-v.begin())
+#define FND(x,S) (S.find(x)!=S.end())
+#define FST(S) *S.begin()
+#define LST(S) *prev(S.end())
+#define VLB(x,v) lower_bound(ALL(v),x)
+#define SLB(x,S) S.lower_bound(x)
 typedef long long ll;
 typedef long double ld;
 
