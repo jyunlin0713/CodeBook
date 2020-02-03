@@ -34,6 +34,7 @@ using namespace std;
 #define LST(S) *prev(S.end())
 #define VLB(x,v) lower_bound(ALL(v),x)
 #define SLB(x,S) S.lower_bound(x)
+#define SRT(v) sort(ALL(v))
 typedef long long ll;
 typedef long double ld;
 
