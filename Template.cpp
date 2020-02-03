@@ -26,7 +26,7 @@ using namespace std;
 #define DI(x) (int)(x-'0')
 #define LL_MAX (1LL<<60)
 #define DB 0
-#define nl cout<<'\n';
+#define NL cout<<'\n';
 #define DSCR(v) sort(ALL(v)),v.resize(unique(ALL(v))-v.begin())
 #define RNK(x,v) (int)(lower_bound(ALL(v),x)-v.begin())
 #define FND(x,S) (S.find(x)!=S.end())
