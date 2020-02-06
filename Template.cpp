@@ -18,7 +18,8 @@ using namespace std;
 #define FORD(i,r,l) for (int i=r;i>=l;i--)
 #define LORD(i,r,l) for (ll i=r;i>=l;i--)
 #define CL(x) memset(x,0,sizeof(x))
-#define DBG(x) cout << #x << " : " << x << '\n'
+#define bg begin()
+#define ed end()
 #define ALL(x) x.begin(), x.end()
 #define SZ(x) (int)(x.size())
 #define UI(x) (int)(x-'A')
@@ -26,15 +27,10 @@ using namespace std;
 #define DI(x) (int)(x-'0')
 #define LL_MAX (1LL<<60)
 #define DB 0
+#define DBG(x) if(DB)cout << #x << " : " << x << '\n'
+#define PRALL(v) if(DB)for(auto it : v)cout<<v<<' '; NL;
 #define NL cout<<'\n';
-#define DSCR(v) sort(ALL(v)),v.resize(unique(ALL(v))-v.begin())
-#define RNK(x,v) (int)(lower_bound(ALL(v),x)-v.begin())
-#define FND(x,S) (S.find(x)!=S.end())
-#define FST(S) *S.begin()
-#define LST(S) *prev(S.end())
-#define VLB(x,v) lower_bound(ALL(v),x)
-#define SLB(x,S) S.lower_bound(x)
-#define SRT(v) sort(ALL(v))
+#define FND(S,x) (S.find(x)!=S.end())
 typedef long long ll;
 typedef long double ld;
 
