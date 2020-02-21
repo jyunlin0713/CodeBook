@@ -18,8 +18,6 @@ using namespace std;
 #define FORD(i,r,l) for (int i=r;i>=l;i--)
 #define LORD(i,r,l) for (ll i=r;i>=l;i--)
 #define CL(x) memset(x,0,sizeof(x))
-#define bg begin()
-#define ed end()
 #define ALL(x) x.begin(), x.end()
 #define SZ(x) (int)(x.size())
 #define UI(x) (int)(x-'A')
