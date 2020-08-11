@@ -42,6 +42,23 @@ int main()
 }
 
 //==============================================
+//MACRO 2
+#include <bits/stdc++.h>
+using namespace std;
+
+#define pb push_back
+#define pii pair<int,int>
+#define f first
+#define s second
+#define MOD 1000000007
+#define mkp make_pair
+#define FOR(i,l,r) for (int i=l;i<=r;i++)
+#define ALL(x) x.begin(), x.end()
+#define SZ(x) (int)(x.size())
+#define DB 0
+typedef long long ll;
+
+//==============================================
 
 //POJ 專用
 #include <cstdio>
