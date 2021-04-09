@@ -29,7 +29,7 @@ using namespace std;
 #define PRALL(v) if(DB)for(auto it : v)cout<<v<<' '; NL;
 #define NL cout<<'\n';
 #define FND(S,x) (S.find(x)!=S.end())
-#define bit(x,y) (!!(x&(1LL<<y)))
+#define bit(x,y) (!!(((ll)x)&(1LL<<y)))
 typedef long long ll;
 typedef long double ld;
 
