@@ -24,12 +24,9 @@ using namespace std;
 #define LI(x) (int)(x-'a')
 #define DI(x) (int)(x-'0')
 #define LL_MAX (1LL<<60)
-#define DB 0
-#define DBG(x) if(DB)cout << #x << " : " << x << '\n'
-#define PRALL(v) if(DB)for(auto it : v)cout<<v<<' '; NL;
-#define NL cout<<'\n';
 #define FND(S,x) (S.find(x)!=S.end())
 #define bit(x,y) (!!(((ll)x)&(1LL<<y)))
+#define inv(x) modexp(x,MOD-2)
 typedef long long ll;
 typedef long double ld;
 
@@ -86,7 +83,23 @@ typedef long long ll;
 
 //TO ADD: dset, spfa, bit
 
-//MODEXP & MODMUL
+//CNK & MODEXP & MODMUL
+
+ll F[MXN];
+ll mx = 200000;
+ll c(ll n, ll k)
+{
+    if(!F[0])
+    {
+        F[0]=1;
+        FOR(i,1,mx)F[i]=F[i-1]*i%MOD;
+    }
+    if(k>n)return 0;
+    ll r = F[n];
+    r = r*modexp(F[n-k], MOD-2)%MOD;
+    r = r*modexp(F[k], MOD-2)%MOD;
+    return r;
+}
 
 ll modexp(ll x, ll y)
 {
