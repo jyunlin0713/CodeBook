@@ -23,7 +23,7 @@ using namespace std;
 #define UI(x) (int)(x-'A')
 #define LI(x) (int)(x-'a')
 #define DI(x) (int)(x-'0')
-#define LL_MAX (1LL<<60)
+#define LL_MAX (1LL<<61)
 #define FND(S,x) (S.find(x)!=S.end())
 #define bit(x,y) (!!(((ll)x)&(1LL<<y)))
 #define inv(x) modexp(x,MOD-2)
