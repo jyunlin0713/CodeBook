@@ -1,0 +1,42 @@
+//From CF1601B
+//range max, single add, find maxpos
+struct
+{
+    void up(int id)
+    {
+        st[id] = max(st[id*2], st[id*2+1]);
+    }
+    void build(int l, int r, int id)
+    {
+        if(l==r)
+        {
+            st[id].f=To[l];
+            st[id].s=l;
+            return;
+        }
+        int m = (l+r)/2;
+        build(l,m,id*2);
+        build(m+1,r,id*2+1);
+        up(id);
+    }
+    pii Max(int L, int R, int l, int r, int id)
+    {
+        if( l>=L && r<=R )return st[id];
+        if( l>R || r<L )return mkp(-1,0);
+        int m = (l+r)/2;
+        return max(Max(L,R,l,m,id*2),Max(L,R,m+1,r,id*2+1));
+    }
+    void Add(int p, int x, int l, int r, int id)
+    {
+        if(l==r)
+        {
+            st[id].f=x;
+            return;
+        }
+        int m = (l+r)/2;
+        if(p<=m)Add(p,x,l,m,id*2);
+        else Add(p,x,m+1,r,id*2+1);
+        up(id);
+    }
+    pii st[MXN*4];
+}segt;
