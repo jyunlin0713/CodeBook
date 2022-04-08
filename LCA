@@ -1,0 +1,41 @@
+vector<int> G[MXN];
+int pa[MXL][MXN];
+int dep[MXN];
+int mxl = 17;
+ 
+void dfs(int u, int p)
+{
+    pa[0][u] = p;
+    for( int i = 1; i <= mxl; i++ )
+    {
+        pa[i][u] = pa[i-1][ pa[i-1][u] ];
+    }
+    for(int v : G[u])
+    {
+        if(v==p)continue;
+        dep[v] = dep[u]+1;
+        dfs(v,u);
+    }
+}
+ 
+inline int lca(int a,int b)
+{
+    if(dep[a]>dep[b])swap(a,b);
+ 
+    for(int i=dep[b]-dep[a],k=0; i; i>>=1)
+    {
+        if(i&1)b=pa[k][b];
+        ++k;
+    }
+ 
+    if(a==b)return a;
+    for(int i=mxl; i>=0; --i)
+    {
+        if(pa[i][a]!=pa[i][b])
+        {
+            a=pa[i][a];
+            b=pa[i][b];
+        }
+    }
+    return pa[0][a];
+}
