@@ -1,0 +1,93 @@
+//CF1477B
+//range sum, range 0/1
+struct
+{
+    int Get(int id)
+    {
+        if( ad[id]==0 )return st[id];
+        if( ad[id]==1 )return len[id];
+        return 0;
+    }
+    void up(int id)
+    {
+        st[id] = Get(id*2)+Get(id*2+1);
+    }
+    void down(int id)
+    {
+        if( ad[id]==0 )return;
+        if( ad[id]==1 )
+        {
+            st[id] = len[id];
+            if(len[id]>1)
+            {
+                ad[id*2] = 1;
+                ad[id*2+1] = 1;
+            }
+        }
+        else
+        {
+            st[id] = 0;
+            if(len[id]>1)
+            {
+                ad[id*2] = 2;
+                ad[id*2+1] = 2;
+            }
+        }
+        ad[id] = 0;
+    }
+ 
+    void build(int l, int r, int id)
+    {
+        ad[id] = 0;
+        len[id] = r-l+1;
+        if(l==r)
+        {
+            st[id]=(F[l-1]=='1');
+            return;
+        }
+        int m = (l+r)/2;
+        build(l,m,id*2);
+        build(m+1,r,id*2+1);
+        up(id);
+    }
+ 
+    int Sum(int L, int R, int l, int r, int id)
+    {
+        down(id);
+        if( l>=L && r<=R )return st[id];
+        if( l>R || r<L )return 0;
+        int m = (l+r)/2;
+        return Sum(L,R,l,m,id*2)+Sum(L,R,m+1,r,id*2+1);
+    }
+ 
+    void Set(int L, int R, int x, int l, int r, int id)
+    {
+        down(id);
+        if( l>=L && r<=R )
+        {
+            ad[id]=x;
+            return;
+        }
+        if( l>R || r<L )return;
+ 
+        int m = (l+r)/2;
+        Set(L,R,x,l,m,id*2);
+        Set(L,R,x,m+1,r,id*2+1);
+        up(id);
+    }
+ 
+    void dfs(int l, int r, int id)
+    {
+        down(id);
+        if(l==r)
+        {
+            B[l] = st[id];
+            return;
+        }
+        int m = (l+r)/2;
+        dfs(l,m,id*2);
+        dfs(m+1,r,id*2+1);
+    }
+ 
+    int st[MXN*4], ad[MXN*4], len[MXN*4];
+}segt;
