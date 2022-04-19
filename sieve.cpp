@@ -50,3 +50,17 @@ void enum_factor(int x)
     int n = vec.size();
     dfs( 1, 0, n, vec );
 }
+
+vector<pii> getpf(int x)
+{
+    vector<pii> vec;
+    int pi = mnp[x];
+    while( pi!=1 )
+    {
+        if( vec.empty() || vec.back().fi!=pi )vec.pb( mkp(pi, 1) );
+        else vec.back().sc++;
+        x /= pi;
+        pi = mnp[x];
+    }
+    return vec;
+}
