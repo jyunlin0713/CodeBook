@@ -16,6 +16,7 @@ using namespace std;
 #define bit(x,y) (!!(((ll)x)&(1LL<<y)))
 typedef long long ll;
 typedef long double ld;
+#define pll pair<ll,ll>
 
 int main()
 {
