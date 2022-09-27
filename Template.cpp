@@ -16,7 +16,12 @@ using namespace std;
 #define bit(x,y) (!!(((ll)x)&(1LL<<y)))
 typedef long long ll;
 typedef long double ld;
-#define pll pair<ll,ll>
+typedef pair<ll,ll> pll;
+typedef pair<int,ll> pil;
+typedef pair<ll,int> pli;
+#define UI(x) (int)(x-'A')
+#define LI(x) (int)(x-'a')
+#define DI(x) (int)(x-'0')
 
 int main()
 {
