@@ -1,5 +1,5 @@
-//From CF1601B
-//range max, single add, find maxpos
+//From CF1748E
+//range max, single add, find left maxpos
 struct
 {
     void up(int id)
@@ -10,8 +10,8 @@ struct
     {
         if(l==r)
         {
-            st[id].f=To[l];
-            st[id].s=l;
+            st[id].fi=A[l];
+            st[id].sc=-l;
             return;
         }
         int m = (l+r)/2;
@@ -25,18 +25,6 @@ struct
         if( l>R || r<L )return mkp(-1,0);
         int m = (l+r)/2;
         return max(Max(L,R,l,m,id*2),Max(L,R,m+1,r,id*2+1));
-    }
-    void Add(int p, int x, int l, int r, int id)
-    {
-        if(l==r)
-        {
-            st[id].f=x;
-            return;
-        }
-        int m = (l+r)/2;
-        if(p<=m)Add(p,x,l,m,id*2);
-        else Add(p,x,m+1,r,id*2+1);
-        up(id);
     }
     pii st[MXN*4];
 }segt;
